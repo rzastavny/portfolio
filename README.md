@@ -4,7 +4,7 @@ Portfolio Magia em Linhas
 
 ## Ícones
 
-nova funcionalidade
-atualização
-correção de bug
-release
+- :package: nova funcionalidade
+- :up: atualização
+- :beetle: correção de bug
+- :checkered_flag: release

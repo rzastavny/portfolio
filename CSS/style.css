@@ -10,6 +10,50 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --font-primary: "Mountains of Christmas", serif;
+}
+
+.hamburguer {
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  z-index: 100;
+  right: 2rem;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.show-menu .hamburguer {
+  right: 16rem;
+}
+
+.show-menu #line1 {
+  transform: rotate(45deg) translate(0.93rem, 0.45rem);
+}
+
+.show-menu #line2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show-menu #line3 {
+  transform: rotate(-45deg) translate(0.88rem, -0.46rem);
+}
+
+.lines {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #fff;
+  box-shadow: 0rem 0.1rem 1px rgba(91, 24, 199, 0.5);
+  transition: transform 1s;
 }
 
 header {
@@ -62,7 +106,7 @@ header {
 
 .banner h1 {
   font-size: 5rem;
-  font-family: "Mountains of Christmas", serif;
+  font-family: var(--font-primary);
   font-weight: lighter;
   text-shadow: 0.2rem 0.25rem 2px rgba(0, 0, 0, 0.1);
   line-height: 6rem;
@@ -114,4 +158,68 @@ header {
     transform: translateY(0) rotateY(0);
     opacity: 1;
   }
+}
+
+.sidebar {
+  width: 20rem;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: -20rem;
+  transition: all 1s;
+}
+
+.show-menu .sidebar {
+  right: 0;
+}
+
+.menu {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.menu-item {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.menu-link {
+  font-family: "Josefin Slab";
+  font-size: 2rem;
+  font-weight: 600;
+  color: #5a18c7;
+  transition: color 0.5s;
+}
+
+.menu-link:hover {
+  color: #eda803;
+  font-weight: 600;
+}
+
+.social-media {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-media i {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #5a18c7;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+}
+
+.social-media i:hover {
+  background-color: #eda803;
 }
